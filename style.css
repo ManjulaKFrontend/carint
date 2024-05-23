@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Inter&family=Noto+Sans+Tirhuta&family=Nunito:wght@600;700&family=Open+Sans:wght@500;600;700&family=Oswald:wght@700&family=PT+Sans+Narrow:wght@700&family=Roboto:wght@300;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --nav-links:16px;
+    --logo:20px;
+    --header-links:15px;
+    --main-head:30px;
+    --sub-head:24px;
+    --L-para:15px;
+    --s-para:13px;
+    --btn:15px;
+    --input:13px;
+   --header-color:#04233b;
+   --name:15px;
+   --sub:12px;
+}
+/***************
+ header
+ **************/
+
+header{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-color);
+}
+header ul{
+    list-style-type: none;
+    display: flex;
+   justify-content: space-between;
+   width: 100%;
+    align-items: center;
+}
+
+header li a{
+    text-decoration: none;
+    color: white;
+    font-family: "nunito";
+}
+header i{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0a97b0;
+}
+@media only  screen and (max-width:500px) and (min-width:200px){
+
+
+    header{
+        display: none;
+    }
+}
+/****************
+navbar           
+***************/
+figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+figure p{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "open sans";
+    font-size: var(--logo);
+    font-weight: bold;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    width: 100%;
+    align-items: center;
+    height: 70px;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+
+}
+.nav-links li{
+    list-style-type: none;
+}
+.nav-links li a{
+     text-decoration: none;
+     font-size: var(--nav-links);
+     color: black;
+     text-transform: uppercase;
+     font-family: "nunito"
+}
+.nav-links li a:hover{
+    color: #0a97b0;
+    transition: 0.5s;
+}
+.nav-links .home  a{
+    color: #0a97b0;
+}
+#check {
+    display: none;
+}
+#menu-btn{
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color:white;
+    display: none;
+  margin-top: 60px;
+  margin-right: 20px;
+  background-color: #0a97b0;
+}
+@media only screen and (max-width:500px) and (min-width:200px){
+    .nav-links{
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        background-color: #0a97b0;
+       top: 120px;
+      display: flex;
+      flex-direction: column;
+     display: none;
+    }
+    .nav-links li{
+    
+    width: 100%;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .nav-links li a{
+        color: white;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+
+    .nav-links{
+        margin-top: -46px;
+    }
+    .nav-links .home  a{
+        color: black;
+    }
+
+    .nav-links li a:hover{
+        color:black;
+        transition: 0.5s;
+    }
+   .nav-links .fa-user{
+        display: none;
+    }
+    .nav-links .fa-magnifying-glass{
+        display: none;
+    }
+
+
+
+#menu-btn{
+    display: block;
+    margin-top: 0px;
+
+}
+#check:checked~.nav-links{
+    display: flex;
+}
+.nav-links .home  a{
+    color:black;
+}
+
+
+}
+
+/********************
+ Home section
+ *******************/
+
+ #home{
+    background-image: url(images/slider-bg.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+     color: white;
+ }
+ #home h1{
+    text-transform: uppercase;
+    font-size: var(--main-head);
+    font-family: "open sans";
+    display: flex;
+    padding-top: 20vh;
+    margin-left: 10vw;
+ }
+ #home p{
+    width: 30%;
+    justify-self: center;
+    font-family: "nunito";
+    font-size:var(--L-para);
+   padding-top: 5vh;
+   margin-left: 10vw;
+    font-weight: bold;
+ }
+#home button{
+    background-color: #0a97b0;
+    color: white;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    padding: 15px;
+    font-size: var(--btn);
+    font-weight: bold;
+    border: none;
+ }
+ #home button:hover{
+background-color:transparent;
+    transition: 0.5s;
+    border: 2px solid #0a97b0;
+ }
+
+@media only screen and (max-width:500px) and (min-width:200px){
+    #home{
+        padding: 0px;
+    }
+#home h1{
+    font-size: 20px;
+}
+    #home p{
+ width: 70%;
+   font-size: 15px;
+    }
+    #home button{
+        font-size: 12px;
+    }
+}
+
+/*************
+services
+*************/
+section span{
+    color: #0a97b0;
+}
+section h1{
+    font-family: "open sans";
+    font-size: var(--sub-head);
+padding: 30px 0;
+   
+}
+#service .p1{
+    padding-bottom: 20px;
+}
+#service{
+    max-width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "nunito";
+    padding: 40px 0;
+}
+#service .service-grid{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+}
+#service .service-grid div{
+    background-color: gainsboro;
+    padding: 10px 20px;
+}
+#service .service-grid img{
+   height: 120px;
+   width:100px;
+    float: inline-start;
+    padding: 10px 20px;
+}
+#service .service-grid p,h6,h4{
+    padding-top: 5px;
+}
+#service .service-grid h4{
+    font-weight: bold;
+    font-size: 16px;
+}
+#service .service-grid h6{
+    color: grey;
+}
+#service .service-grid p{
+    text-align: justify;
+    line-height: 26px;
+    font-size: 14px;
+
+}
+
+
+
+@media only screen and (max-width:500px) and (min-width:200px){
+    #service .service-grid{
+    grid-template-columns: 1fr;
+    gap: 30px;
+    }
+    #service .service-grid img{
+      float:none;
+        height: 60px;
+        width: 60px;
+        padding: 0px 10px;
+
+    }
+   
+}
+
+
+
+/***************************
+           About
+**************************/ 
+
+
+#about{
+   max-width: 80%;
+   margin-right: auto;
+   margin-left: auto;
+   padding: 100px 20px;
+   font-family: "nunito";
+
+}
+#about .about-head p{
+    margin-bottom: 20px;
+    text-align: justify;
+    width: 80%;
+   
+}
+#about button{
+    background-color: #0a97b0;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+#about button:hover{
+    background-color: transparent;
+    transition: 0.5s;
+    border: 2px solid #0a97b0;
+    color: black;
+}
+ #about .about-grid{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ #about .about-grid img{
+    height: 40vh;
+    width: 28vw;
+margin-top: -37vh;
+margin-left: 1vw;
+z-index: 1;
+ }
+ #about .blue-container{
+    background-color:#04233b;
+    height: 35vh;
+    width: 30vw;
+    z-index: 0;
+    margin-top: 10vh;
+
+ }
+   @media only screen and (max-width:500px) and (min-width:200px){
+    #about{
+        padding: 10px;
+
+    }
+    #about .about-head p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #about .about-grid{
+     flex-direction: column;
+
+    }
+    #about .about-grid img{
+        width:80vw;
+        
+     
+    }
+    #about .blue-container{
+        width: 82vw;
+       
+    }
+    
+    
+   }
+   /************************
+      track part
+      *********************/
+   
+      .track img{
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 140px;
+       
+      }
+      .track-head{
+        position: absolute;
+        margin-top: -50vh;
+      padding: 20px;
+      margin-left: 10vw;
+      color: white;
+      font-family: "nunito";   
+      }
+      .track-head h1{
+        margin-bottom: 20px;
+      }
+      .track-head p{
+        width: 50%;
+        margin-bottom: 20px;
+      }
+      .track-head input{
+        padding: 10px;
+        width: 50%;
+      }
+       .track-head button{
+        background-color: #0a97b0;
+        color: white;
+      padding: 9px 20px ;
+        border: none;
+        font-size: 12px;
+      }
+      .track-head button:hover{
+        background-color: transparent;
+        border: 1px solid #0a97b0;
+        transition: 0.5s;
+      }
+
+
+@media only screen and (max-width:500px) and (min-width:200px){
+
+.track img{
+margin-top: 10vh;
+height: 80vh;
+
+}
+.track .track-head{
+    margin-top: -70vh;
+    font-size: 18px;
+padding: 10px;
+
+}
+.track-head  p{
+width: 90%;
+    font-size: 12px;
+}
+.track-head input{
+ width: 60%;  
+}
+.track-head b{
+    padding: 10px 20px;
+}
+
+
+}
+/***************
+client part
+****************/
+
+#client{
+
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "nunito";
+
+}
+#client h1{
+   margin: 10px;
+}
+
+
+.client-grid{
+   display: flex;
+justify-content: space-evenly;
+align-items: center;   
+}
+
+
+.client-grid .client p{
+    border: 1px solid grey;
+    padding: 50px;
+    margin: 20px;
+   
+}
+#client .client-grid span{
+  padding-left: 20vw;
+color: grey;
+position: absolute;
+ 
+}
+.client-grid .client img{
+    height: 50px;
+    width: 50px;
+}
+#client .icon{
+    background-color: #0a97b0;
+    margin: 10px;
+    width: 50px;
+    padding: 15px;
+}
+#client .icon:hover{
+border: 2px solid #0a97b0;
+    background-color: black;
+    transition: 0.5s;
+}
+@media only screen and (max-width:500px) and (min-width:200px){
+    #client{
+        padding: 10px;
+    }
+    #client h1{
+        text-align: center;
+    }
+
+.client-grid{
+   flex-direction: column;
+}
+
+.client-grid span{
+    padding-left: 30vw;
+    position: absolute;
+
+}
+.client-grid .client p{
+    font-size: 12px;
+    padding: 20px;
+   
+}
+.client-grid .client img{
+  padding-left: 20px;
+  height: 60px;
+  width: 60px;
+}
+ .client-grid .icons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+}
+/**************
+contact
+***************/
+
+#contact {
+padding:0 20px;
+padding-top: 100px;
+max-width: 80%;
+margin-left: auto;
+margin-right:auto;
+}
+
+.contact-grid{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-grid  .form input{
+
+    width: 70%;
+    padding: 20px;
+    margin: 10px 0;
+    border: none;
+    box-shadow: 2px 2px 2px 2px lightgrey;
+   
+}
+.contact-grid  textarea{
+    width: 70%;
+    padding: 20px;
+      margin: 10px 0;
+      border: none;
+      box-shadow: 2px 2px 2px 2px lightgrey;
+}
+
+
+
+.contact-grid .form button{
+margin: 10px 0;
+background-color: #0a97b0;
+color: white;border: none;
+padding: 10px 40px;
+margin-top: 40px;
+}
+.contact-grid .form button:hover{
+    background-color: black;
+    transition: 0.5s;
+
+}
+@media only screen and (max-width:500px) and (min-width:200px){
+   #contact{
+    padding-top:100px;
+    width: 100%;
+
+   }
+
+    .contact-grid{
+      flex-direction: column;
+     
+        
+    }
+    .contact-grid  .form input{
+width: 100%;
+margin: 10px 0;
+    }
+    .contact-grid  .form textarea{
+        width: 100%;
+        margin: 10px 0;
+    }
+ 
+    .contact-grid iframe {
+        width: 300px;
+padding-top: 50px;
+height: 300px;
+       
+    }
+    
+   
+}   
+
+
+/**************
+ Footer
+ ***************/
+#footer{
+    padding: 100px 0 0 0;
+}
+footer{
+    background-color: #04233b;
+   
+ display: flex;
+ justify-content: space-between;
+ padding: 20px 20px 20px 20px;
+ font-family: "nunito";
+}
+
+
+
+footer div{
+    width: 400px;
+    color: white;
+    list-style-type: none;
+    padding: 0 20px;
+
+}
+footer div a {
+    text-decoration: none;
+    color: white;
+   
+}
+footer span i{
+    color: white;
+
+}
+footer span i:hover{
+    color: #0a97b0;
+    transition: 0.5s
+}
+footer h1{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+footer div li {
+    padding-top: 10px;
+}
+footer i
+
+{
+    margin: 5px;
+}
+#footer input{
+    border: none;
+    padding: 10px;
+    background: none;
+    border-bottom: 1px solid grey;
+}
+#footer form button{
+    border: none;
+    background-color: #0a97b0;
+    padding: 10px 60px;
+    color: white;
+    margin: 5px;
+}
+#footer form button:hover{
+    transition: 0.5s;
+    background-color: black;border: 2px solid white;
+    cursor: pointer;
+}
+
+
+
+
+.footerp{
+    display: flex;
+
+justify-content: center;
+align-items: center;
+padding: 20px;
+background-color: white;
+font-family: "nunito";
+}
+@media only screen and (max-width:500px) and (min-width:200px){
+#footer{
+    padding: 100px 0 0 0;
+}
+footer{
+   flex-direction: column;
+
+}
+footer div{
+    width: 100%;
+
+}
+footer h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+footer .info{
+    padding-bottom: 0;
+}
+footer .subs{
+    padding-bottom: 0;
+}
+}
+
